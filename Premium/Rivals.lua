@@ -2,35 +2,19 @@
 local premiumKeysURL = "https://raw.githubusercontent.com/sadia4ek/LfbQWTuozKLtUKEYUwuIbjPOd/refs/heads/main/Keys/premiumkeys.txt"
 
 -- Функция деобфускации внутри проверки
-local function checkKey(inputKey)
+local function checkKey(inputKey)    
     local charMap = {
-        -- Заглавные
-        A = "xQ!3mK@9Tz",  B = "7#mKWj8^n&",  C = "Tz@9!vR4xQ",  D = "!vR42kP$Wj",
-        E = "2kP$Wj8^n5",  F = "Wj8^n&5YsbL",  G = "n&5YsbLq16U",  H = "b*Lq16Uf%Mc",
-        I = "6Uf%Mc0+=Gh",  J = "Mc0+=Gh3!9r",  K = "=Gh3!9rX~Bw",  L = "9rX~Bw#4zi7",
-        M = "Bw#4zi7$VpQe",  N = "i7$VpQe2@Ns",  O = "Qe2@Ns8&1oD",  P = "Ns8&1oDCk6%",
-        Q = "1oD^Ck6%Fj!",  R = "Ck6%Fj!9a4H",  S = "Fj!9a4Hy*Zd",  T = "4Hy*Zd3#Gt0",
-        U = "Zd3#Gt0@5mA",  V = "Gt0@5mA$Ru7",  W = "5mA$Ru7!=Lw",  X = "Ru7!=Lw2Pb9",
-        Y = "=Lw2Pb9~xQ3",  Z = "Pb9~xQ3m!7K",
-
-        -- Строчные
-        a = "k3!qX7m#Tz",  b = "7Xm#Tz4@!3",  c = "Tz4@!3rV$2",  d = "!3rV$2kPW8",
-        e = "$2kPW8j^&n",  f = "W8j^&nY5*bL",  g = "&nY5*bLq1Uf",  h = "*bLq1Uf%c0=",
-        i = "1Uf%c0=Gh9r",  j = "c0=Gh9rX~w4",  k = "Gh9rX~w4zi7",  l = "rX~w4zi7Vp2",
-        m = "w4zi7Vp2@Ns",  n = "i7Vp2@Ns8oD",  o = "Vp2@Ns8oD^k",  p = "Ns8oD^k6%Fj",
-        q = "oD^k6%Fj9aH",  r = "k6%Fj9aHy*d",  s = "Fj9aHy*d3Gt",  t = "Hy*d3Gt0mA5",
-        u = "d3Gt0mA5$u7",  v = "Gt0mA5$u7!w",  w = "mA5$u7!wLb9",  x = "u7!wLb9~Q3x",
-        y = "wLb9~Q3xm7K",  z = "b9~Q3xm7K!q",
-
-        -- Цифры
-        ["0"] = "xQ3m!7KTz@",  ["1"] = "7KTz@9!vR4",  ["2"] = "z@9!vR42kPW",
-        ["3"] = "vR42kPWj8^",  ["4"] = "kPWj8^n&5Y",  ["5"] = "j8^n&5YsbLq",
-        ["6"] = "n&5YsbLq16U",  ["7"] = "YsbLq16Uf%",  ["8"] = "q16Uf%Mc0+=",
-        ["9"] = "Uf%Mc0+=Gh3",
-
-        -- Спецсимволы
-        [" "]  = "Gh3!9rX~Bw",
-        ["\t"] = "rX~Bw#4zi7",
+        A = "¤7&@1x", B = "¿#9!$%", C = "π~4+|=", D = "§8^}2?", E = "∞3*<:;", F = "¥0/!6>", G = "¢5=\\9]", H = "∆{2&8~",
+        I = "°1+?7/", J = "©4!|0$", K = "µ8^3#@", L = "¶2>6:=", M = "Ω9~1*!", N = "≈5|7&%", O = "√3#8/?", P = "÷6@0+^",
+        Q = "ƒ1&9~!", R = "∂7|3$=", S = "ß4/8+?", T = "ø0#5^@", U = "æ9~2&!", V = "†3|6*%", W = "‡8?1+/", X = "¬5$7#=",
+        Y = "±2@9~!", Z = "∞6|0*%",
+        a = "!7%~3#", b = "@2^8&!", c = "/9+1?=", d = "|4$6~*", e = "0#8@2!", f = "^5&1?~", g = "*3/7+=", h = "~9|2$#",
+        i = "+6@0^!", j = "?1*8~&", k = "#7|3+%", l = "&2/9?~", m = "4$0!^*", n = "8~6@1#", o = "%3+7|!", p = "2^9?&~",
+        q = "*5@0#|", r = "!7~3&+", s = "6/1?8^", t = "~2$9*#", u = "+0@4|!", v = "?8^6~&", w = "3#7/1*", x = "&5+9?~",
+        y = "|2@8!^", z = "7~0*3#",
+        ["0"] = "~!3#7@", ["1"] = "&9?2*^", ["2"] = "|5+0!~", ["3"] = "@7#1/8", ["4"] = "*2^9?&", 
+        ["5"] = "6~!3|0", ["6"] = "?8+4@1", ["7"] = "#0*5~2", ["8"] = "&3|9!^", ["9"] = "@1~7+5",
+        [" "] = "%~0|#@", ["\t"] = "@»3|8«@"
     }
     local rev = {} for k, v in pairs(charMap) do rev[v] = k end
     
