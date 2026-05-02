@@ -84,7 +84,7 @@ end
 
 --// Environment
 
-getgenv().ExunysDeveloperAimbot = {
+getgenv().ZWAim = {
 	DeveloperSettings = {
 		UpdateMode = "RenderStepped",
 		TeamCheckOption = "TeamColor",
