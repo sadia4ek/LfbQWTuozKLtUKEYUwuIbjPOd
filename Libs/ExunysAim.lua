@@ -84,7 +84,7 @@ end
 
 --// Environment
 
-getgenv().PetuhAim = {
+getgenv().ExunysDeveloperAimbot = {
 	DeveloperSettings = {
 		UpdateMode = "RenderStepped",
 		TeamCheckOption = "TeamColor",
