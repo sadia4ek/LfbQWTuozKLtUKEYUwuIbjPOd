@@ -84,7 +84,7 @@ end
 
 --// Environment
 
-getgenv().ZWAim = {
+getgenv().PetuhAim = {
 	DeveloperSettings = {
 		UpdateMode = "RenderStepped",
 		TeamCheckOption = "TeamColor",
